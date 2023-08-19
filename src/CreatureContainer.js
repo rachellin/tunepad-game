@@ -5,7 +5,7 @@ export class CreatureContainer extends React.Component {
     render() {
         return (
             <StyledCreatureContainer className="container">
-                <h1>LEVEL {this.props.level}</h1>
+                <h2>LEVEL {this.props.level}</h2>
                 creature here 
                 <div className="feedback">
                     {this.props.correct ? 

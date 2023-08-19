@@ -3,6 +3,9 @@ import { StyledContainer } from './style/Style';
 
 import { Recipe } from './Recipe';
 import { CreatureContainer } from './CreatureContainer';
+import { PianoRoll } from './PianoRoll';
+
+import { trace } from './trace';
 
 export class Container extends React.Component {
     constructor(props) {
@@ -14,8 +17,19 @@ export class Container extends React.Component {
                 ["for loop", true],
                 ["for loop", false],
                 ["if statement", true]
-            ]
+            ],
+            trace: trace
         }
+    }
+
+    // componentDidUpdate for constantly updating the feedback message?
+    componentDidMount() {
+        //console.log(this.state.trace)
+        this.readTrace();
+    }
+
+    readTrace() {
+        return this.state.trace.filter(obj => obj['command'] == 'play')
     }
 
     render() {
@@ -24,11 +38,15 @@ export class Container extends React.Component {
                 <CreatureContainer 
                     level={this.state.level}
                     correct={this.state.correct}/>
-                <div className="code-cell container">
-                    code cell goes here
+                <div className="container code-container">
+                    <PianoRoll trace={this.readTrace(this.state.trace)}/>
+                    <div className="code-cell">
+                        <iframe className="tunepad-cell" src="https://tunepad.space/project/65713?embedded=true"></iframe>
+                    </div>
                     <button className="submit">submit</button>
                 </div>
                 <Recipe recipe={this.state.recipe}/>
+                {/* <button className="help">?</button> */}
             </StyledContainer>
         )
     }

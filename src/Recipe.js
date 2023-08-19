@@ -27,7 +27,7 @@ export class Recipe extends React.Component {
         return (
             <StyledRecipe className="container">
                 <h1>RECIPE</h1>
-                {this.renderIngredients(this.props.recipe)}
+                <div className="ingredient-list">{this.renderIngredients(this.props.recipe)}</div>
             </StyledRecipe>
         )
     }
