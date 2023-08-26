@@ -29,7 +29,7 @@ export class Container extends React.Component {
     }
 
     readTrace() {
-        return this.state.trace.filter(obj => obj['command'] == 'play')
+        return this.state.trace.filter(obj => obj['command'] == 'play' | obj['command'] == 'rest')
     }
 
     render() {
@@ -41,7 +41,7 @@ export class Container extends React.Component {
                 <div className="container code-container">
                     <PianoRoll trace={this.readTrace(this.state.trace)}/>
                     <div className="code-cell">
-                        <iframe className="tunepad-cell" src="https://tunepad.space/project/65713?embedded=true"></iframe>
+                        <iframe className="tunepad-cell" src="http://localhost:8080/project/65773?embedded=true"></iframe>
                     </div>
                     <button className="submit">submit</button>
                 </div>

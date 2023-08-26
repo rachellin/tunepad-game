@@ -18,7 +18,7 @@ export const trace = [{
 		'line': 2,
 		'velocity': 90,
 		'sustain': 0,
-		'note': 60
+		'note': 40
 	}
 }, {
 	'command': 'trace',
@@ -79,11 +79,25 @@ export const trace = [{
 		'line': 5
 	}
 }, {
-	'command': 'play',
-	'duration': 2,
+	'command': 'rest',
+	'duration': 1,
 	'time': 3.9999999999,
 	'params': {
-		'line': 6,
+		'line': 6
+	}
+}, {
+	'command': 'trace',
+	'duration': 0,
+	'time': 4.9999999999,
+	'params': {
+		'line': 6
+	}
+}, {
+	'command': 'play',
+	'duration': 2,
+	'time': 4.9999999999,
+	'params': {
+		'line': 7,
 		'velocity': 90,
 		'sustain': 0,
 		'note': 60
@@ -91,20 +105,20 @@ export const trace = [{
 }, {
 	'command': 'trace',
 	'duration': 0,
-	'time': 5.9999999999,
+	'time': 6.9999999999,
 	'params': {
-		'line': 6
+		'line': 7
 	}
 }, {
 	'command': 'stop',
 	'duration': 0,
-	'time': 5.9999999999,
+	'time': 6.9999999999,
 	'params': {}
 }, {
 	'command': 'trace',
 	'duration': 0,
-	'time': 5.9999999999,
+	'time': 6.9999999999,
 	'params': {
-		'line': 10
+		'line': 11
 	}
 }]

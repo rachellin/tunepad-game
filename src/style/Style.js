@@ -14,7 +14,7 @@ export const StyledContainer = styled.div`
     }
 
     .code-container {
-        width: 30%;
+        width: 100%;
     }
 
     .code-cell {
@@ -25,7 +25,7 @@ export const StyledContainer = styled.div`
 
     .tunepad-cell {
         border: none;
-        width: 500px;
+        width: 100%;
         height: 700px;
     }
 
